@@ -1,0 +1,47 @@
+{
+  "name": "docdoctor",
+  "version": "0.0.1",
+  "description": "Fix up rST",
+  "main": "./build/main.js",
+  "bin": {
+    "redirect-checker": "./build/main.js"
+  },
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "tsc -b",
+    "watch": "tsc -b -w",
+    "test": "jest",
+    "verbose": "jest --verbose",
+    "coverage": "jest --coverage",
+    "docs": "npx typedoc --excludePrivate --exclude '**/*.test.ts' --out docs src",
+    "release": "release-it"
+  },
+  "author": "Chris Bush",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7",
+    "@types/glob": "^8.0.0",
+    "@types/jest": "^26",
+    "@types/node": "^12",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "eslint": "^6",
+    "eslint-config-prettier": "^6",
+    "eslint-plugin-prettier": "^3",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "jest": "^26",
+    "prettier": "^2",
+    "release-it": "^15.2.0",
+    "ts-jest": "^26.5.6",
+    "typedoc": "^0",
+    "typescript": "^4"
+  },
+  "dependencies": {
+    "glob": "^8.0.3",
+    "magic-string": "^0.26.2",
+    "restructured": "^0.0.11",
+    "toml": "^3.0.0",
+    "tree-visit": "^0.1.2",
+    "yargs": "^15.4.1"
+  }
+}

@@ -1,0 +1,16 @@
+---
+name: Check Redirects for Circular Refs.
+author: Chris Bush
+description: 'Checks redirect file for circular refs..'
+branding:
+  icon: 'check-square'
+  color: 'white'
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: |
+        cd "${{github.action_path}}" 
+        npm i 
+        npm run build 
+        node . redirects ${{github.workspace}}/config/redirects
