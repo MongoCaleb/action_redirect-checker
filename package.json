@@ -1,5 +1,5 @@
 {
-  "name": "docdoctor",
+  "name": "refchecker",
   "version": "0.0.1",
   "description": "Fix up rST",
   "main": "./build/main.js",
